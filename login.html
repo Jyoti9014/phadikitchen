@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #333;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form name="submit-to-google-sheet">
+            <h1>Order Now</h1>
+            <fieldset>
+                <legend>PERSONAL INFORMATION</legend>
+                <label for="Name">NAME</label>
+                <input type="text" name="name" placeholder="enter your name"><br>
+                <label for="Email">EMAIL</label>
+                <input type="text" name="email" placeholder="enter your email"><br>
+                <label for="phone num">PHONE NUM</label>
+                <input type="text" name="phoneno" placeholder="enter your phone num"><br>
+
+                <br>
+                <legend>ADDRESS</legend>
+                <label for="street">STREET:</label>
+                <input type="text" name="street" placeholder="enter the street"><br>
+                <label for="city">CITY:</label>
+                <input type="text" name="city" placeholder="enter the city"><br>
+                <label for="state">STATE:</label>
+                <input type="text" name="state" placeholder="enter the state"><br>
+                <label for="Pincode">PINCODE:</label>
+                <input type="text" name="pincode" placeholder="enter the pincode"><br>
+
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <form name="submit-to-google-sheet"></form>
+
+    <script>
+        alert('fill your information');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyag_zP1hcex4Pqh08aravFpEVnURjJtMHoMX6cPjoAfNe2CR3aRNoTv-55u9hn-JI-/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            const name = form.elements['name'].value;
+        const email = form.elements['email'].value;
+        const phoneno = form.elements['phoneno'].value;
+        const street = form.elements['street'].value;
+        const city = form.elements['city'].value;
+        const state = form.elements['state'].value;
+        const pincode = form.elements['pincode'].value;
+
+        if (!name || !email || !phoneno || !street || !city || !state || !pincode) {
+            alert('Please fill in all fields');
+            return;
+        }
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+                alert('your information is registered');
+        })
+        .catch(error => {
+                console.error('Error!', error.message);
+                alert('Error occurred while submitting your information. Please try again later.');
+            });
+    </script>
+</body>
+
+</html>

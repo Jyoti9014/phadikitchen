@@ -1,0 +1,279 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*COLOUR PALLETE-------------------------------------------------
+#7C96BE
+#DED7D4
+#0E2158
+#3A4662
+
+-----------------------------------------------------------------
+*/
+body{
+  /*  background-color: #00563B*/
+  background-color: aliceblue;
+  color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#header{
+    background-image: url(bgclipart2.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container{
+    padding: 30px 10%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 30em;
+    
+   
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 2em;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    position: relative;
+    color: #0E2158 ;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    color: #0E2158 ;
+}
+nav ul li a::after{
+    content: ' ';
+    width: 0;
+    height: 3px;
+    background:#0E2158;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+} 
+
+#header h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: #0E2158;
+}
+
+#main-heading{
+    margin-top: 8em;
+
+}
+#about{
+    background-image: url(aboutbgcolor.png);
+    height: 100vh;
+    width: 100%;
+}
+#about img{
+    height: 50%;
+    width: 50%;
+}
+
+#about h1{
+    margin-top: 10%;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+}
+#about p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    padding: 20px 80px;
+}
+
+#menu h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0E2158;
+    font-size: 5em;
+    margin-top: 8%;
+}#head-menu{
+    background-image: url(aboutbgcolor.png);
+    height: 50vh;
+    width: 100%;
+}
+#head-menu h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5em;
+    margin-top: 5%;
+}
+#option-card{
+    margin-top: 5em;
+}
+
+#option-card-inside-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+}
+
+.card{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    transition: 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#0E2158);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: white;
+}
+
+.layer a{
+    text-decoration: none;
+    background-color: aliceblue;
+    color: #0E2158;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 10px 10px;
+
+}
+.card:hover img{
+    transform: scale(1.1); /*zoom k liye img ko*/
+}
+
+.card:hover .layer{
+    height: 100%;
+}
+
+
+#contact{
+    background-color: #0E2158;
+    height: 100vh;
+    width: 100%;
+    margin-top: 10em;
+    overflow: hidden;
+}
+
+#contact h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5em;
+    margin-top: 5%;
+
+}
+
+.row{
+  
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.contact-left{
+    color: aliceblue;
+    margin-top: 5em;
+    flex-basis: 35%;
+}
+.email{
+    text-decoration: none;
+    color: aliceblue;
+}
+.email:hover{
+    text-decoration: underline;
+}
+.social-icon{
+    margin-top: 5em;
+    display: flex;
+    gap: 2em;
+    
+}
+.social-icon a{
+    color: white;
+    text-decoration: none;
+    background-color:#0E2158;
+   font-size: 1.5em;
+   padding: 10px 10px;
+   border: 1px solid white;
+   transition: 0.5s;
+}
+
+.social-icon a:hover{
+    background-color: aliceblue;
+    color: #0E2158;
+}
+
+.contact-right{
+    float: right;
+    margin-top: 3em;
+    
+}
+.contact-right img{
+    border-radius: 30px;
+    
+}
+

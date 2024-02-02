@@ -1,0 +1,354 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    padding: 20px 10%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 30em;
+    
+   
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 2em;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    position: relative;
+    color: white ;
+}
+nav ul li a::after{
+    content: ' ';
+    width: 0;
+    height: 3px;
+    background:white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+} 
+
+
+
+#head-menu{
+    background-image: url(aboutbgcolor.png);
+    height: 50vh;
+    width: 100%;
+}
+#head-menu h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5em;
+    margin-top: 5%;
+}
+/*
+
+#option-card{
+    margin-top: 10em;
+}
+
+#option-card-inside-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+}
+
+.card{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    transition: 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#0E2158);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: white;
+}
+
+.layer a{
+    text-decoration: none;
+    background-color: aliceblue;
+    color: #0E2158;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 10px 10px;
+
+}
+.card:hover img{
+    transform: scale(1.1); /*zoom k liye img ko
+}
+
+.card:hover .layer{
+    height: 100%;
+}
+
+.thali{
+    margin-top: 15em;
+}
+
+.thali-in{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+
+}
+
+.thali-in img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    transition: 0.5s;
+}*/
+
+
+
+.item-name{
+  font-size: 3em;
+  color: #0E2158;
+}
+p.logo{
+    color: aliceblue;
+}
+.header{
+    height: 80px;
+    width: 70%;
+    background-color: #0E2158;
+    border-radius: 3px;
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px
+}
+
+
+.header.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.cart{
+    display: flex;
+    background-color: aliceblue;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+}
+
+.fa-solid{
+    color: #0E2158;
+}
+.cart p{
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background-color: #0E2158;
+    color: aliceblue;
+}
+
+.cont{
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+#root{
+   width: 60%;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-gap:20px;
+}
+.sidebar{
+    width: 40%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.head{
+    background-color: #0E2158;
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.foot{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top:1px solid #333 ;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #0E2158;
+    border-radius:5px ;
+    padding: 15px;
+}
+.img-box{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images{
+    max-width: 90%;
+    max-height:90% ;
+    object-fit: cover;
+    object-position: center;
+}
+.bottom{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+h2{
+    font-size: 20px;
+    color: red;
+}
+button{
+    width:100%;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: #0E2158;
+    padding: 7px 25px;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+button:hover{
+    background-color: #333;
+}
+.cartItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    border-radius: 3px;
+    margin: 10px 10px;
+}
+.row-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #0E2158;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    border-radius: 3px;
+    margin: 10px 10px;
+
+}
+.row-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #0E2158;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.rowimg{
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+}
+.fa-trash:hover{
+    cursor: pointer;
+    color: #333;
+}
+
+
+
